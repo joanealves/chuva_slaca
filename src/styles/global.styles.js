@@ -46,11 +46,17 @@ export const GlobalStyle = createGlobalStyle`
     }
 `
 
+const absolute = `
+    position: absolute;
+    right: 0;
+    bottom: 0;
+`
+
 export const Text = styled.p`
     font-size: ${props => (props.fSizeMobile ? props.fSizeMobile : '12px')};
-    font-weight: ${props => (props.fBold ? 'bold': 'normal')};
-    color: ${props => (props.textColor ? props.textColor  : 'var(--gray-details)')};
-    margin: ${props => (props.margin ? props.margin  : 'unset')};
+    font-weight: ${props => (props.fBold ? 'bold' : 'normal')};
+    color: ${props => (props.textColor ? props.textColor : 'var(--gray-details)')};
+    margin: ${props => (props.margin ? props.margin : 'unset')};
 
     @media (min-width:600px) {
     font-size: ${props => (props.fSize ? props.fSize : '14px')};
@@ -59,8 +65,8 @@ export const Text = styled.p`
 
 export const Span = styled.span`
     font-size: ${props => (props.fSizeMobile ? props.fSizeMobile : '12px')};
-    font-weight: ${props => (props.fBold ? 'bold': 'normal')};
-    color: ${props => (props.textColor ? props.textColor  : 'var(--textCards)')};
+    font-weight: ${props => (props.fBold ? 'bold' : 'normal')};
+    color: ${props => (props.textColor ? props.textColor : 'var(--textCards)')};
 
     @media (min-width:600px) {
          font-size: ${props => (props.fSize ? props.fSize : '14px')};
@@ -76,7 +82,8 @@ export const TitletWrapper = styled.div`
 export const SubTitle = styled.h2`
     color: var(--text-orange);
     font-size: ${props => (props.fSizeMobileSub ? props.fSizeMobileSub : '14px')};
-    font-weight: ${props => (props.fBold ? 'bold': 'normal')};
+    font-weight: ${props => (props.fBold ? 'bold' : 'normal')};
+    margin: ${props => (props.margin ? props.margin : 'unset')};
 
     @media (min-width:600px) {
         font-size: ${props => (props.fSize ? props.fSize : '16px')};
@@ -86,8 +93,9 @@ export const SubTitle = styled.h2`
 export const Label = styled.label`
     color: var(--text-orange);
     font-size: ${props => (props.fSizeMobileSub ? props.fSizeMobileSub : '14px')};
-    font-weight: ${props => (props.fBold ? 'bold': 'normal')};
+    font-weight: ${props => (props.fBold ? 'bold' : 'normal')};
     display: block;
+    margin-bottom: 5px;
 
     @media (min-width:600px) {
         font-size: ${props => (props.fSize ? props.fSize : '16px')};
@@ -110,6 +118,7 @@ export const WrapperContent = styled.div`
         padding: 15px;
     }
 `
+
 // TODO: refatorar todos os buttos para o global
 export const Button = styled.button`
     width: ${props => (props.widthDefault ? props.widthDefault : '133px')};
@@ -125,12 +134,13 @@ export const Button = styled.button`
     padding: 13px 7px;
     margin: 0 auto;
     margin-top: -18px;
-    color: ${props => (props.textColor ? props.textColor  : 'var(--shape)')};
+    color: ${props => (props.textColor ? props.textColor : 'var(--shape)')};
     text-decoration: ${props => props.decoration && 'underline'};
     font-weight: 700;
     font-size: 15px;
-    
-`
+    ${props => (props.positionAbsolute && absolute)};    
+    `
+
 // TODO: refatorar todos os ShareContainer para o global
 export const ShareContainer = styled.div`
    border-bottom: 1px solid #E7E7E7;

@@ -8,6 +8,8 @@ import {
 } from '../../../../styles/global.styles';
 
 const SuccessMessage = ({ setIsForm, setIsSuccess, setIsShare }) => {
+    const mobile = window.innerWidth < 600
+
     const handleOncliCkForm = () => {
         setIsSuccess(false)
         setIsForm(true)
@@ -26,7 +28,7 @@ const SuccessMessage = ({ setIsForm, setIsSuccess, setIsShare }) => {
                 <Text textColor="var(--graySugest)" margin="18px 0 29px">Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</Text>
                 <Button
                     onClick={handleOncliCkDiscover}
-                    widthDefault="235px"
+                    widthDefault={mobile ? 'auto' : '235px'}
                     bg="unset"
                     textColor="var(--orange)"
                     decoration
@@ -39,7 +41,7 @@ const SuccessMessage = ({ setIsForm, setIsSuccess, setIsShare }) => {
             </ShareContainer>
             <Button
                 onClick={handleOncliCkForm}
-                widthDefault="235px"
+                widthDefault={mobile ? 'auto' : '235px'}
             >
                 criar novo tópico
             </Button>
