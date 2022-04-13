@@ -1,74 +1,70 @@
 import React from 'react';
 
-
 import movie from '../../../../assets/movie.png';
 import doi from '../../../../assets/Doi.png';
 import StarIcon from '../../../../assets/icons/StarIcon';
 import DownloadIcon from '../../../../assets/icons/DownloadIcon';
 
-import { TextTitle } from '../../../../styles/global.styles.js'
+import { authors, university } from '../../../../constants/constants'
+
+import { TextTitle, TitletWrapper, Text, Span } from '../../../../styles/global.styles.js'
 
 import * as S from './Details.styles'
 const Details = () => {
     return (
-        <section>
-                <div>
-                    <S.OrangeTextTitle>Análise sensorial de preparações funcionais desenvolvidas para escolares
-                        entre 09 e 15 anos, do município de Campinas/SP
-                    </S.OrangeTextTitle>
-                    <S.Movie src={movie} alt='Capa trailer ' />
-                </div>
-                <div>
-                    <div>
+        <S.DetailsContainer>
+            <S.Content>
+                <S.OrangeTextTitle>Análise sensorial de preparações funcionais desenvolvidas para escolares
+                    entre 09 e 15 anos, do município de Campinas/SP
+                </S.OrangeTextTitle>
+                <S.Movie src={movie} alt='Capa trailer ' />
+            </S.Content>
+            <div>
+                    <S.ButtonContainer>
+                        <S.Button>
+                            <DownloadIcon />
+                            Download
+                        </S.Button>
+                        <S.StarDoiContainer>
+                            <StarIcon />
+                        </S.StarDoiContainer>
+                        <S.StarDoiContainer>
+                            <img src={doi} alt=''  width="18px" height="18px"/>
+                        </S.StarDoiContainer>
+                    </S.ButtonContainer>
+                    <S.OrangeSubTitle>COMO CITAR ESSE TRABALHO?</S.OrangeSubTitle>
+                    <TitletWrapper >
+                        <TextTitle>Detalhes</TextTitle>
+                    </TitletWrapper>
+                    <S.DetailsContainer>
                         <div>
-                            <button>
-                                <DownloadIcon />
-                                Download
-                            </button>
                             <div>
-                                <StarIcon />
+                                <Span>Tipo de Apresentação: </Span>
+                                <Span fBold fSizeMobile="10px">Pôster</Span>
                             </div>
                             <div>
-                                <img src={doi} alt='' />
+                                <Span>Eixo temático: </Span>
+                                <Span fBold  fSizeMobile="10px">Alimentação e saúde (AS)</Span>
+                            </div>
+                            <div>
+                                <Span>Palavras-chaves: </Span>
+                                <Span fBold  fSizeMobile="10px">Alimentos funcionais, alimentação escolar.</Span>
                             </div>
                         </div>
-                        <S.OrangeSubTitle>COMO CITAR ESSE TRABALHO?</S.OrangeSubTitle>
                         <div>
-                            <TextTitle>Detalhes</TextTitle>
+                            <Text fBold>Autores:</Text>
+                            {authors?.map((author) => (
+                                <Text fSizeMobile="10px">{author?.name}</Text>
+                            ))}
                         </div>
                         <div>
-                            <div>
-                                <p>
-                                    Tipo de Apresentação:
-                                    <span>Pôster</span>
-                                </p>
-                                <p>
-                                    Eixo temático:
-                                    <span>Alimentação e saúde (AS)</span>
-                                </p>
-                                <p>
-                                    Palavras-chaves:
-                                    <span>Alimentos funcionais, alimentação escolar.</span>
-                                </p>
-                            </div>
-                            <div>
-                                Autores:
-                                Galileo Galilei¹
-                                Berta Lange de Morretes²
-                                Isaac Newton³
-                                Cesar Lattes¹
-                                Stephen Hawking⁴
-                            </div>
-                            <div>
-                                ¹Universidade Estadual de Campinas
-                                ²Universidade de São Paulo
-                                ³Instituto Nacional de Pesquisas Espaciais
-                                ⁴Universidade Federal do Rio de Janeiro
-                            </div>
+                            {university?.map((item) => (
+                            <Text fSizeMobile="10px" textColor="var(--grayDetails3)">{item?.name}</Text>
+                            ))}
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </S.DetailsContainer>
+            </div>
+        </S.DetailsContainer>
     );
 }
 

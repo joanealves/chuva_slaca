@@ -12,9 +12,9 @@ const Header = () => {
   return (
     <S.HeaderContainer>
       <div>
-        <Text fSize="12px">Anais do Simpósio Latino Americano de Ciências de Alimentos</Text>
-        <Text fSize="14px">Anais do 13° Simpósio Latino Americano de Ciência de Alimentos</Text>
-        <Text fSize="12px">ISSN: 1234-5678</Text>
+        <Text>Anais do Simpósio Latino Americano de Ciências de Alimentos</Text>
+        <Text fSize="22px">Anais do 13° Simpósio Latino Americano de Ciência de Alimentos</Text>
+        <Text>ISSN: 1234-5678</Text>
       </div>
       <S.Language>
         <img src={globo} alt='' width='100%'/>
@@ -26,8 +26,8 @@ const Header = () => {
       </S.Language>
       <S.WelcomeContainer>
         <S.Welcome>
-          <Text fSize="11px">Bem-vindo!</Text>
-          <Text fSize="10px">alguem12@galascience.com</Text>
+          <Text fSizeMobile="11px">Bem-vindo!</Text>
+          <Text fSizeMobile='10px' fSize="12px">alguem12@galascience.com</Text>
         </S.Welcome>
         <S.ProfileImageContainer>
           <S.Profile src={profile} alt="Foto perfil de uma mulher" />
