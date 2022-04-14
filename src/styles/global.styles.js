@@ -61,6 +61,7 @@ export const Text = styled.p`
 
     @media (min-width:600px) {
     font-size: ${props => (props.fSize ? props.fSize : '14px')};
+    
     }
 `
 
