@@ -35,11 +35,18 @@ export const SlacaImg = styled.img`
     width: -webkit-fill-available;
 `
 
+const isActive = `
+   background-color: var(--background-hover);
+    border-left: 5px solid  #ED7839;
+`
+
 export const Navigation = styled.nav`
     background: var(--gray) ;
-    display: grid;
-    
-    a {
+    display: grid;   
+ 
+`
+export const NavigationLink = styled(Link)`
+   
         padding-left: 24px;
         display: flex;
         align-items: center;
@@ -50,9 +57,12 @@ export const Navigation = styled.nav`
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
         font-size: 12px;
 
-        &:hover {
+           &:hover {
             border-left: 5px solid  #ED7839;
             background-color: var(--background-hover);
         }
-    }
+
+       
+         ${props => props.active && isActive}
+    
 `

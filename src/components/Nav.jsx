@@ -6,6 +6,12 @@ import * as S from './Nav.styles';
 
 const Nav = () => {
 
+    const isPath = (path) => {
+        return path === '/'
+            ? window.location.href === "http://localhost:3000/"
+            : window.location.pathname.includes(path)
+    }
+
 
     return (
         <S.AsideContainer>
@@ -17,14 +23,14 @@ const Nav = () => {
                 <Link />
             </S.SlacaLink>
             <S.Navigation>
-                <Link to="/">Apresentação</Link>
-                <Link to="/">Comitês</Link>
-                <Link to="/">Autores</Link>
-                <Link to="/">Eixos temáticos</Link>
-                <Link to="/trabalhos">Trabalhos</Link>
-                <Link to="/">Contato</Link>
+                <S.NavigationLink to="/" active={isPath('/')}>Apresentação</S.NavigationLink>
+                <S.NavigationLink to="/">Comitês</S.NavigationLink>
+                <S.NavigationLink to="/">Autores</S.NavigationLink>
+                <S.NavigationLink to="/">Eixos temáticos</S.NavigationLink>
+                <S.NavigationLink to="/trabalhos" active={isPath('/trabalhos')} >Trabalhos</S.NavigationLink>
+                <S.NavigationLink to="/">Contato</S.NavigationLink>
             </S.Navigation>
-        </S.AsideContainer>
+        </S.AsideContainer >
     );
 }
 
