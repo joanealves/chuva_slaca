@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/chuva_slaca/static/css/main.e6c13ad2.css",
+    "main.js": "/chuva_slaca/static/js/main.737d4541.js",
+    "static/media/profile.svg": "/chuva_slaca/static/media/profile.cffc1f9c2ce55c37083266262a8f3722.svg",
+    "static/media/movie.png": "/chuva_slaca/static/media/movie.105a6741fb71515b69f4.png",
+    "static/media/logo.svg": "/chuva_slaca/static/media/logo.9bce39a39f5178e7b46c49e331205649.svg",
+    "static/media/galoa.svg": "/chuva_slaca/static/media/galoa.e1e5a942cfab3b6c09ae21b0dfa90e1a.svg",
+    "static/media/mao.svg": "/chuva_slaca/static/media/mao.8376b82c8ae0214f41d36a09e2088163.svg",
+    "static/media/dialogo.svg": "/chuva_slaca/static/media/dialogo.741a4c57ca31b1e3b0a33ce5de3d6900.svg",
+    "static/media/ideia.svg": "/chuva_slaca/static/media/ideia.a8ff3e2589dbd8b6af661321406bf1ed.svg",
+    "index.html": "/chuva_slaca/index.html",
+    "static/media/notification.svg": "/chuva_slaca/static/media/notification.3ff2efc49c17884838280582da3ac73e.svg",
+    "static/media/heart.svg": "/chuva_slaca/static/media/heart.88d9d2d196b65cf4c70f5406ac50f66b.svg",
+    "static/media/info.svg": "/chuva_slaca/static/media/info.674f07a4a791affd85a61666d293f36f.svg",
+    "main.e6c13ad2.css.map": "/chuva_slaca/static/css/main.e6c13ad2.css.map",
+    "main.737d4541.js.map": "/chuva_slaca/static/js/main.737d4541.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.737d4541.js"
+  ]
+}
