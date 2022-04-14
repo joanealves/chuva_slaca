@@ -8,6 +8,7 @@ export const DiscussionsContainer = styled.section`
 export const DiscussionsImg = styled.div`
     display: flex;
     justify-content: space-around;
+    padding: 10px 0;
 `
 
 export const CardsContainer = styled.div`
