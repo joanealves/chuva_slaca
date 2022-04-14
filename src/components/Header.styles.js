@@ -12,7 +12,7 @@ export const HeaderContainer = styled.header`
     @media (min-width:1250px) {
          height: 68px;
          align-content: center;
-         justify-content: space-around;
+         justify-content: space-between;
          align-items: center;
         }
 `
@@ -27,6 +27,8 @@ export const TextContainer = styled.div`
 
 export const Language = styled.div`
     display: flex; 
+    align-items: center;
+    justify-content:center;
     width: auto;
     height: 28px;
     border: 1px solid #CCCCCC;

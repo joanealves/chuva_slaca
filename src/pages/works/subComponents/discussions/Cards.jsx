@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import like from '../../../../assets/heart.svg'
 import info from '../../../../assets/info.svg'
@@ -9,6 +9,18 @@ import { SubTitle, Text } from '../../../../styles/global.styles';
 import * as S from './Cards.styles'
 
 const Cards = () => {
+    const [newCards, setNewCards] = useState([])
+
+    useEffect(() => {
+        setNewCards(cards)
+    }, [])
+
+    const increaseLikeQuantity = (index) => {
+        const teste = [...cards]
+        teste[index].like += 1
+        setNewCards(teste)
+    }
+
     return (
         <S.CardsWrapper>
             {cards?.map((item, index) => (
@@ -18,7 +30,7 @@ const Cards = () => {
                     <Text fSizeMobile='10px' fSize='12px'>{item?.info}</Text>
                     <S.DropdowContainer>
                         <img src={info} alt='' width="4px" height="18px" />
-                        <S.ButtonLike >
+                        <S.ButtonLike onClick={() => increaseLikeQuantity(index)}>
                             <img src={like} alt='' width="12px" height="12px" />
                         </S.ButtonLike>
                         <Text>{item?.like} like</Text>

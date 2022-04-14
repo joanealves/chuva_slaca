@@ -1,8 +1,8 @@
 import React from 'react';
 
-import globo from '../assets/globo.svg';
 import profile from '../assets/profile.svg';
 import notification from '../assets/notification.svg';
+import GloboIcon from '../assets/icons/GloboIcon';
 
 import * as S from './Header.styles';
 
@@ -17,11 +17,10 @@ const Header = () => {
         <Text roboto>ISSN: 1234-5678</Text>
       </S.TextContainer>
       <S.Language>
-        <img src={globo} alt='' width='100%' />
+        <GloboIcon />
         <S.Select>
-          <option>PT,BR</option>
+          <option>PT-BR</option>
           <option>US</option>
-          <option>PT</option>
         </S.Select>
       </S.Language>
       <S.WelcomeContainer>
