@@ -9,6 +9,11 @@ export const DiscussionsImg = styled.div`
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
+
+    @media (min-width: 768px) {
+          justify-content: center;
+          gap: 51px;
+    }
 `
 
 export const CardsContainer = styled.div`
@@ -21,6 +26,12 @@ export const CardsContainer = styled.div`
 export const ShareContainer = styled.div`
    border-bottom: 1px solid #E7E7E7;
    padding-bottom: 31px;
+   text-align: center;
+
+    @media (min-width: 900px) {
+        width: 57%;
+        margin: 0 auto;
+    }
 `
 
 export const ButtonTopico = styled.button`

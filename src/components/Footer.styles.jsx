@@ -6,6 +6,10 @@ export const FooterContainer = styled.footer`
     flex-direction: column;
     padding: 16px;
     gap: 10px;
+
+    @media (min-width: 900px) {
+        flex-direction: row;
+    }
 `
 
 export const LeftContainer = styled.div`

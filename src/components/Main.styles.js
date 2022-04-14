@@ -12,5 +12,6 @@ export const MainContainer = styled.main`
 
     @media (min-width:1100px) {
         padding: 20px 45px;
+        gap: 30px;
     }
 `

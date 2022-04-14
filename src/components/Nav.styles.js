@@ -5,6 +5,7 @@ export const AsideContainer = styled.aside`
     background: var(--gray) ;
     grid-area: aside;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    z-index: 10;
 `
 
 export const Slacatext = styled.div`

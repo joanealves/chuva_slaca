@@ -6,11 +6,23 @@ export const HeaderContainer = styled.header`
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    padding: 5px 20px;
+    justify-content: flex-end;
  
-
-    @media (min-width:600px) {
-         /* height: 68px; */
+    @media (min-width:1250px) {
+         height: 68px;
+         align-content: center;
+         justify-content: space-around;
+         align-items: center;
         }
+`
+
+export const TextContainer = styled.div`
+    width: -webkit-fill-available;
+
+    @media (min-width: 1250px) {
+        width: unset;
+    }
 `
 
 export const Language = styled.div`
@@ -19,8 +31,11 @@ export const Language = styled.div`
     height: 28px;
     border: 1px solid #CCCCCC;
     border-radius: 3px;
-    background: unset;
-    border: unset;
+
+    @media (min-width: 600px) {
+        width: 97px;
+        height: 34px;
+    }
 `
 
 export const Select = styled.select`
@@ -31,6 +46,7 @@ export const Select = styled.select`
 
 export const WelcomeContainer = styled.div`
     display: flex;
+    gap: 5px;
 `
 
 export const Welcome = styled.div`
@@ -39,18 +55,18 @@ export const Welcome = styled.div`
 
 export const ProfileImageContainer = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 12px;
-    display: flex;
     justify-content: flex-start;
     align-items: flex-start;    
+    position: relative;
 `
 
 export const Profile = styled.img`
     border-radius: 50%;
-    width: 30px;
+    width: auto;
 `
 export const Notification = styled.img`
-    width: 15px;
+    width: 10px;
+    position: absolute;
+    right: -3px;
+    top: -3px;
 `

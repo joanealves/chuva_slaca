@@ -11,15 +11,15 @@ import { Text } from '../styles/global.styles'
 const Header = () => {
   return (
     <S.HeaderContainer>
-      <div>
-        <Text>Anais do Simpósio Latino Americano de Ciências de Alimentos</Text>
-        <Text fSize="22px">Anais do 13° Simpósio Latino Americano de Ciência de Alimentos</Text>
-        <Text>ISSN: 1234-5678</Text>
-      </div>
+      <S.TextContainer>
+        <Text roboto margin="0 0 5px 0">Anais do Simpósio Latino Americano de Ciências de Alimentos</Text>
+        <Text roboto fSize="22px" fBold>Anais do 13° Simpósio Latino Americano de Ciência de Alimentos</Text>
+        <Text roboto>ISSN: 1234-5678</Text>
+      </S.TextContainer>
       <S.Language>
-        <img src={globo} alt='' width='100%'/>
+        <img src={globo} alt='' width='100%' />
         <S.Select>
-          <option>BR</option>
+          <option>PT,BR</option>
           <option>US</option>
           <option>PT</option>
         </S.Select>

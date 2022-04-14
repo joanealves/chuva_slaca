@@ -57,6 +57,7 @@ export const Text = styled.p`
     font-weight: ${props => (props.fBold ? 'bold' : 'normal')};
     color: ${props => (props.textColor ? props.textColor : 'var(--gray-details)')};
     margin: ${props => (props.margin ? props.margin : 'unset')};
+    font-family: ${props => (props.roboto && 'Roboto')};
 
     @media (min-width:600px) {
     font-size: ${props => (props.fSize ? props.fSize : '14px')};
@@ -105,9 +106,12 @@ export const Label = styled.label`
 export const TextTitle = styled.h3`
     font-size: 14px;
     color: var(--gray-titles);
-
+    font-family: 'Roboto';
+    font-weight: 500;
+    
     @media (min-width:600px) {
         font-size: 20px;
+        line-height: 25px;
     }
 `
 

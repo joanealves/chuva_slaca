@@ -15,8 +15,9 @@ export const DetailsContainer = styled.div`
     }
 
     @media (min-width:1300px) {
-         height: 450px;
+         height: 494px;
     }
+
     @media (min-width:1500px) {
         height: unset;
     }
@@ -32,16 +33,20 @@ export const ScroolContainer = styled.div`
     max-height: 250px;
 
     @media (min-width:1300px) {
-        max-height: 342px;
+        max-height: 385px;
     }
 `
 
 export const Scrool = styled.div`
     height: -webkit-fill-available;
     overflow-y: auto;
-     display: flex;
+    display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @media (min-width:1300px) {
+        gap: 20px
+    }
 `
 
 export const Content = styled.div`
@@ -53,6 +58,10 @@ export const Content = styled.div`
 
     @media (min-width:1100px) {
         width: 60%;
+    }
+
+    @media (min-width:1100px) {
+        width: 114%;
     }
 `
 
