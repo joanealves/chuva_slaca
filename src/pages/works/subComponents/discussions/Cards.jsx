@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import like from '../../../../assets/heart.svg'
 import info from '../../../../assets/info.svg'
@@ -8,22 +8,24 @@ import { cards } from '../../../../constants/constants'
 import { SubTitle, Text } from '../../../../styles/global.styles';
 import * as S from './Cards.styles'
 
-const Cards = () => {
-    const [newCards, setNewCards] = useState([])
+const Cards = ({ setNewCards, newCards }) => {
 
     useEffect(() => {
         setNewCards(cards)
     }, [])
 
     const increaseLikeQuantity = (index) => {
-        const teste = [...cards]
-        teste[index].like += 1
-        setNewCards(teste)
+        const isViewCards = newCards ? newCards : cards
+        const isCards = [...isViewCards]
+        isCards[index].like += 1
+        setNewCards(isCards)
     }
+
+    const isViewCards = newCards ? newCards : cards
 
     return (
         <S.CardsWrapper>
-            {cards?.map((item, index) => (
+            {isViewCards?.map((item, index) => (
                 <S.CardContainer key={`${index}-${item.id}`}>
                     <SubTitle fSizeMobile='10px'>{item?.subject}</SubTitle>
                     <Text fBold fSizeMobile='10px' fSize='12px'>{item?.name}</Text>

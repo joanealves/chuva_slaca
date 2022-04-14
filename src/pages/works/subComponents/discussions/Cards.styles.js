@@ -33,4 +33,7 @@ export const ButtonLike = styled.button`
     border: unset;
     width: 27px;
     height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `

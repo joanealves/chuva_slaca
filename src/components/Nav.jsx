@@ -5,22 +5,24 @@ import logo from '../assets/logo.svg';
 import * as S from './Nav.styles';
 
 const Nav = () => {
+
+
     return (
         <S.AsideContainer>
             <S.SlacaLink to="/">
                 <S.Slacatext>
-                <p>Slaca 2019</p>
+                    <p>Slaca 2019</p>
                 </S.Slacatext>
                 <S.SlacaImg src={logo} alt="" />
                 <Link />
             </S.SlacaLink>
             <S.Navigation>
-                    <a href="/">Apresentação</a>
-                    <a href="/">Comitês</a>
-                    <a href="/">Autores</a>
-                    <a href="/">Eixos temáticos</a>
-                    <a href="/trabalhos">Trabalhos</a>
-                    <a href="/">Contato</a>
+                <Link to="/">Apresentação</Link>
+                <Link to="/">Comitês</Link>
+                <Link to="/">Autores</Link>
+                <Link to="/">Eixos temáticos</Link>
+                <Link to="/trabalhos">Trabalhos</Link>
+                <Link to="/">Contato</Link>
             </S.Navigation>
         </S.AsideContainer>
     );

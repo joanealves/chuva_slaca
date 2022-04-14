@@ -4,7 +4,7 @@ import { Text, Button, Label, SubTitle } from '../../../../styles/global.styles'
 
 import * as S from './DiscussionsForm.styles'
 
-const DiscussionsForm = ({ setIsSuccess }) => {
+const DiscussionsForm = ({ setIsSuccess, newCards, setNewCards }) => {
     const [answer, setAnswer] = useState("");
     const [share, setShare] = useState("");
     const [errorShare, setErrorShare] = useState(false);
@@ -28,7 +28,22 @@ const DiscussionsForm = ({ setIsSuccess }) => {
             console.log('enviou share')
         }
 
-        if (share.length > 0 && answer.length > 0) setIsSuccess(true)
+        if (share.length > 0 && answer.length > 0) {
+            addToCards()
+            setIsSuccess(true)
+        }
+    }
+
+    const addToCards = () => {
+        const isCards = [...newCards]
+        isCards.unshift({
+            name: "Adriano da Silva",
+            subject: answer,
+            info: share,
+            like: 0,
+            answer: 0,
+        })
+        setNewCards(isCards)
     }
 
     return (

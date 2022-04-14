@@ -12,16 +12,11 @@ import Cards from './Cards';
 import DiscussionsForm from './DiscussionsForm';
 import SuccessMessage from './SuccessMessage';
 
-
-
 const Discussions = () => {
     const [isForm, setIsForm] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
     const [isShare, setIsShare] = useState(false)
-
-    // console.log('isShare', isShare)
-    // console.log('isForm', isForm)
-    // console.log('isSuccess', isSuccess)
+    const [newCards, setNewCards] = useState([])
 
     return (
         <S.DiscussionsContainer>
@@ -49,7 +44,13 @@ const Discussions = () => {
                         </S.ButtonTopico>
                     </>
                 )}
-                {(isForm && !isSuccess) && <DiscussionsForm setIsSuccess={setIsSuccess} />}
+                {(isForm && !isSuccess) && (
+                    <DiscussionsForm
+                        setIsSuccess={setIsSuccess}
+                        newCards={newCards}
+                        setNewCards={setNewCards}
+                    />
+                )}
                 {isSuccess && (
                     <SuccessMessage
                         setIsForm={setIsForm}
@@ -57,7 +58,10 @@ const Discussions = () => {
                         setIsShare={setIsShare}
                     />
                 )}
-                <Cards />
+                <Cards
+                    setNewCards={setNewCards}
+                    newCards={newCards}
+                />
             </WrapperContent>
         </S.DiscussionsContainer>
     );
