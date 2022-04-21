@@ -22,16 +22,13 @@ const Resume = () => {
             </TitletWrapper>
             <WrapperContent>
                 <Text fSizeMobile="10px">
-                    A sequência de edições do Simpósio Latino Americano de Ciência de Alimentos, desde 1995,
-                    nos dá o privilégio, a nós pesquisadores, de contar com um observatório
-                    de desenvolvimento da área de Alimentos, com impacto na indústria de Alimentos,
-                    com a importância social e econômica da área de Alimentos, com abrangência nacional e internacional
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut.  Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant...
                     {!isViewMore && (
                         <>
-                        <Span>... </Span>
-                        <S.ViewMoreButton onClick={() => setIsViewMore(!isViewMore)}>
-                            ver mais
-                        </S.ViewMoreButton>
+                            <Span>... </Span>
+                            <S.ViewMoreButton onClick={() => setIsViewMore(!isViewMore)}>
+                                ver mais
+                            </S.ViewMoreButton>
                         </>
                     )}
                     {isViewMore && (

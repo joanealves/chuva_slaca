@@ -10,7 +10,7 @@ export const InputContainer = styled.input`
     height: 39px;
     width: -webkit-fill-available;
     margin-bottom: 5px;
-    font-size: 12px;
+    font-size: 14px;
     padding: 5px ;
     
     @media (min-width:600px) {

@@ -8,7 +8,8 @@ export const DiscussionsContainer = styled.section`
 export const DiscussionsImg = styled.div`
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
+    padding: 27px 0;
+    gap: 51px;
 
     @media (min-width: 768px) {
           justify-content: center;
@@ -29,10 +30,11 @@ export const ShareContainer = styled.div`
    text-align: center;
 
     @media (min-width: 900px) {
-        width: 57%;
+        width: 61%;
         margin: 0 auto;
     }
 `
+
 
 export const ButtonTopico = styled.button`
     height: 32px;
@@ -49,6 +51,8 @@ export const ButtonTopico = styled.button`
     margin: 0 auto;
     margin-top: -18px;
     color: var(--shape);
+    font-family: Quicksand;
     font-weight: 700;
     font-size: 15px;
+    line-height: 16px;
 `

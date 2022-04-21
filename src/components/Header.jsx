@@ -13,7 +13,7 @@ const Header = () => {
     <S.HeaderContainer>
       <S.TextContainer>
         <Text roboto margin="0 0 5px 0">Anais do Simpósio Latino Americano de Ciências de Alimentos</Text>
-        <Text roboto fSize="22px" fBold>Anais do 13° Simpósio Latino Americano de Ciência de Alimentos</Text>
+        <Text roboto fSize="22px" textColor="var(--brown-aside)">Anais do 13° Simpósio Latino Americano de Ciência de Alimentos</Text>
         <Text roboto>ISSN: 1234-5678</Text>
       </S.TextContainer>
       <S.Language>

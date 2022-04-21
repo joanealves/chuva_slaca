@@ -17,7 +17,7 @@ const Nav = () => {
         <S.AsideContainer>
             <S.SlacaLink to="/">
                 <S.Slacatext>
-                    <p>Slaca 2019</p>
+                    <p>SLACA 2019</p>
                 </S.Slacatext>
                 <S.SlacaImg src={logo} alt="" />
                 <Link />

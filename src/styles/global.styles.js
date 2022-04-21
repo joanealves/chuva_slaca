@@ -54,10 +54,11 @@ const absolute = `
 
 export const Text = styled.p`
     font-size: ${props => (props.fSizeMobile ? props.fSizeMobile : '12px')};
-    font-weight: ${props => (props.fBold ? 'bold' : 'normal')};
+    font-weight: ${props => (props.fweight ? props.fontweight : '400')};
     color: ${props => (props.textColor ? props.textColor : 'var(--gray-details)')};
     margin: ${props => (props.margin ? props.margin : 'unset')};
     font-family: ${props => (props.roboto && 'Roboto')};
+    text-align: ${props => (props.center && 'center')};
 
     @media (min-width:600px) {
     font-size: ${props => (props.fSize ? props.fSize : '14px')};
@@ -69,9 +70,11 @@ export const Span = styled.span`
     font-size: ${props => (props.fSizeMobile ? props.fSizeMobile : '12px')};
     font-weight: ${props => (props.fBold ? 'bold' : 'normal')};
     color: ${props => (props.textColor ? props.textColor : 'var(--textCards)')};
+    letter-spacing: 0.02em;
 
     @media (min-width:600px) {
          font-size: ${props => (props.fSize ? props.fSize : '14px')};
+         letter-spacing: 0.02em;
     }
 `
 
@@ -84,7 +87,7 @@ export const TitletWrapper = styled.div`
 export const SubTitle = styled.h2`
     color: var(--text-orange);
     font-size: ${props => (props.fSizeMobileSub ? props.fSizeMobileSub : '14px')};
-    font-weight: ${props => (props.fBold ? 'bold' : 'normal')};
+    font-weight: ${props => (props.fBold ? 'bold' : '700')};
     margin: ${props => (props.margin ? props.margin : 'unset')};
 
     @media (min-width:600px) {
@@ -95,7 +98,8 @@ export const SubTitle = styled.h2`
 export const Label = styled.label`
     color: var(--text-orange);
     font-size: ${props => (props.fSizeMobileSub ? props.fSizeMobileSub : '14px')};
-    font-weight: ${props => (props.fBold ? 'bold' : 'normal')};
+    /* font-weight: ${props => (props.fBold ? 'bold' : 'normal')}; */
+     font-weight: ${props => (props.fBold ? 'bold' : '700')};
     display: block;
     margin-bottom: 5px;
 
@@ -124,7 +128,6 @@ export const WrapperContent = styled.div`
     }
 `
 
-// TODO: refatorar todos os buttos para o global
 export const Button = styled.button`
     width: ${props => (props.widthDefault ? props.widthDefault : '133px')};
     height: 32px;
@@ -146,7 +149,6 @@ export const Button = styled.button`
     ${props => (props.positionAbsolute && absolute)};    
     `
 
-// TODO: refatorar todos os ShareContainer para o global
 export const ShareContainer = styled.div`
    border-bottom: 1px solid #E7E7E7;
    padding-bottom: 31px;

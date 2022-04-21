@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    padding: 5px 20px;
+    padding: 5px 50px;
     justify-content: flex-end;
  
     @media (min-width:1250px) {
@@ -43,7 +43,9 @@ export const Language = styled.div`
 export const Select = styled.select`
     background: unset;
     border: unset;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
 `
 
 export const WelcomeContainer = styled.div`

@@ -70,10 +70,18 @@ export const OrangeTextTitle = styled.h1`
     font-family: 'Roboto', sans-serif;
     color: var(--text-orange);
     font-weight: 900;
+    line-height: 25px;
     margin-bottom: 10px;
 
     @media (min-width:600px) {
         font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 19px;
+        letter-spacing: 0.05em;
+    }
+
+    @media (min-width:1400px) {
+        font-size: 26px;
         line-height: 25px;
         margin-bottom: 19px;
         letter-spacing: 0.05em;

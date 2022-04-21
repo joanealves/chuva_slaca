@@ -14,6 +14,8 @@ export const Slacatext = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Roboto';
+    font-weight: 700;
 
     p {
         font-size: 20px;
@@ -55,7 +57,9 @@ export const NavigationLink = styled(Link)`
         text-decoration: none;
         background: #FFFFFF;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-        font-size: 12px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 19px;
 
            &:hover {
             border-left: 5px solid  #ED7839;

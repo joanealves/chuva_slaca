@@ -24,4 +24,9 @@ export const ButtonSaibamais = styled.button`
     font-size: 12px;
     background-color: #71488e;
     color: #FFF;
+
+    a {
+        color: #FFF;
+        text-decoration: none;
+    }
 `
