@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom';
 
 const isMenu = `
     width: 60%;
-    position: absolute;
+    position: fixed;
     min-height: 100vh;
     display:block;
     background: var(--shape);
+
+    @media (min-width: 768px) {
+        display: none;
+    }
 `
 
 export const AsideContainer = styled.aside`
@@ -24,8 +28,6 @@ export const AsideContainer = styled.aside`
     }
 
     transition: 0.2s ease all;
-
-    
 `
 
 export const Slacatext = styled.div`
@@ -36,6 +38,7 @@ export const Slacatext = styled.div`
     justify-content: center;
     font-family: 'Roboto';
     font-weight: 700;
+     ${props => props.menu && `display: none`};
 
     p {
         font-size: 20px;
@@ -44,6 +47,20 @@ export const Slacatext = styled.div`
             font-size: 30px;
         }
     }
+`
+
+export const IoIosCloseContainer = styled.button`
+    border: unset;
+    background: unset;
+    right: 0;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+
+     @media (min-width:768px) {
+        display: none;
+    }
+    
 `
 
 export const SlacaLink = styled(Link)`
@@ -59,7 +76,7 @@ export const SlacaImg = styled.img`
 
 const isActive = `
    background-color: var(--background-hover);
-    border-left: 5px solid  #ED7839;
+   border-left: 5px solid  #ED7839;
 `
 
 export const Navigation = styled.nav`
@@ -68,25 +85,24 @@ export const Navigation = styled.nav`
  
 `
 export const NavigationLink = styled(Link)`
-   
-        padding-left: 24px;
-        display: flex;
-        align-items: center;
-        height: 44px;
-        color: var(--brown-aside);
-        text-decoration: none;
-        background: #FFFFFF;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 19px;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    color: var(--brown-aside);
+    text-decoration: none;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19px;
 
-           &:hover {
-            border-left: 5px solid  #ED7839;
-            background-color: var(--background-hover);
-        }
+        &:hover {
+        border-left: 5px solid  #ED7839;
+        background-color: var(--background-hover);
+    }
 
-       
-         ${props => props.active && isActive}
+    
+        ${props => props.active && isActive}
     
 `

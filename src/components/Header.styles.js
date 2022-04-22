@@ -30,7 +30,7 @@ export const IoMdMenu = styled.button`
     background: unset;
 
     @media (min-width:768px) {
-            display: none;
+        display: none;
     }
 `
 
@@ -42,6 +42,7 @@ export const TextContainer = styled.div`
         width: unset;
          text-align: unset;
     }
+    
 
     @media (min-width: 1300px) {
         width: unset;
@@ -99,9 +100,30 @@ export const Profile = styled.img`
     border-radius: 50%;
     width: auto;
 `
+
 export const Notification = styled.img`
     width: 10px;
     position: absolute;
     right: -3px;
     top: -3px;
+`
+
+export const Overlay = styled.div`
+    background-color: rgba(0, 0, 0, 0.25);
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+    ${props => props.isOverlay && `display: block`};
+
+     @media (min-width: 768px) {
+        display: none;
+    }
 `

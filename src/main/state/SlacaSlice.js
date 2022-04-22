@@ -5,13 +5,16 @@ const SlacaSlice = createSlice({
     initialState: {
         data: {
             menu: false,
+            isOverlay: false,
 
         }
     },
     reducers: {
         setMenu: (state, action) => {
-            console.log(action)
             state.data.menu = action.payload
+        },
+        setIsOverlay: (state, action) => {
+            state.data.isOverlay = action.payload
         }
     }
 })
@@ -19,7 +22,8 @@ const SlacaSlice = createSlice({
 export default SlacaSlice.reducer
 
 export const {
-    setMenu
+    setMenu,
+    setIsOverlay
 } = SlacaSlice.actions
 
 export const selectSlacaSliceData = state => state.infoSlaca.data

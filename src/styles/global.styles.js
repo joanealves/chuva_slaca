@@ -22,8 +22,6 @@ export const GlobalStyle = createGlobalStyle`
         --backgroundHeader: #FDF1EB;
         --backgroundH3: #ECECEC;
         --backgroundSlaca:linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
-        
-
         --header-heigth: 68px;
         --aside-width: 150px;
         --footer-heigth: 181px;
