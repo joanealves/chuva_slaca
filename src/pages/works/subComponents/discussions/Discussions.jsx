@@ -27,13 +27,13 @@ const Discussions = () => {
                 {!isForm && (
                     <>
                         <S.ShareContainer>
-                            <SubTitle>Compartilhe suas ideias ou dúvidas com os autores!</SubTitle>
+                            <SubTitle fSize="18px" lineHeight="21px" roboto>Compartilhe suas ideias ou dúvidas com os autores!</SubTitle>
                             <S.DiscussionsImg>
                                 <img src={crescimento} alt="Foto Mão segurando uma planta" width="50px" />
                                 <img src={dialogo} alt="Foto Caixa de diálogo" width="50px" />
                                 <img src={ideia} alt="Foto Pessoas tendo uma idéia ou insigth" width="50px" />
                             </S.DiscussionsImg>
-                            <Text>
+                            <Text lineHeight="19px">
                                 Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade?
                                 Deixe seus
                                 questionamentos ou sugestões para o autor!

@@ -54,10 +54,12 @@ const absolute = `
 
 export const Text = styled.p`
     font-size: ${props => (props.fSizeMobile ? props.fSizeMobile : '12px')};
-    font-weight: ${props => (props.fweight ? props.fontweight : '400')};
+    font-weight: ${props => (props.fWeight ? props.fWeight : '400')};
     color: ${props => (props.textColor ? props.textColor : 'var(--gray-details)')};
     margin: ${props => (props.margin ? props.margin : 'unset')};
     font-family: ${props => (props.roboto && 'Roboto')};
+    font-family: ${props => (props.segoe && '"Segoe UI", Arial, sans-serif')};
+    line-height: ${props => (props.lineHeight ? props.lineHeight : '15px')};
     text-align: ${props => (props.center && 'center')};
 
     @media (min-width:600px) {
@@ -68,9 +70,10 @@ export const Text = styled.p`
 
 export const Span = styled.span`
     font-size: ${props => (props.fSizeMobile ? props.fSizeMobile : '12px')};
-    font-weight: ${props => (props.fBold ? 'bold' : 'normal')};
+    font-weight: ${props => (props.fWeight ? props.fWeight : 'normal')};
     color: ${props => (props.textColor ? props.textColor : 'var(--textCards)')};
     letter-spacing: 0.02em;
+    line-height: ${props => (props.lineHeight ? props.lineHeight : '15px')};
 
     @media (min-width:600px) {
          font-size: ${props => (props.fSize ? props.fSize : '14px')};
@@ -89,6 +92,8 @@ export const SubTitle = styled.h2`
     font-size: ${props => (props.fSizeMobileSub ? props.fSizeMobileSub : '14px')};
     font-weight: ${props => (props.fBold ? 'bold' : '700')};
     margin: ${props => (props.margin ? props.margin : 'unset')};
+    line-height: ${props => (props.lineHeight ? props.lineHeight : '15px')};
+    font-family: ${props => (props.roboto && 'Roboto')};
 
     @media (min-width:600px) {
         font-size: ${props => (props.fSize ? props.fSize : '16px')};
@@ -134,6 +139,8 @@ export const Button = styled.button`
     background: ${props => (props.bg ? props.bg : 'linear-gradient(180deg, #FEB254 0%, #F0813D 100%)')};
     box-shadow: ${props => (props.shadow ? props.shadow : ' 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24)')};
     border-radius: ${props => (props.borderRadius ? props.borderRadius : '4px')};
+    font-size: ${props => (props.fSize ? props.fSize : '16px')};
+    line-height: ${props => (props.lineHeight ? props.lineHeight : '15px')};
     border: unset;
     display: flex;
     align-items: center;

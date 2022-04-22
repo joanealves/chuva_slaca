@@ -48,9 +48,13 @@ const DiscussionsForm = ({ setIsSuccess, newCards, setNewCards }) => {
 
     return (
         <div>
-            <Text margin="0 0 22px 0" center>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</Text>
+            <Text margin="0 0 22px 0"
+                lineHeight="18px"
+                center>
+                Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!
+            </Text>
             <S.Form onSubmit={handleOncliCkForm}>
-                <Label for="answer">Assunto</Label>
+                <Label for="answer" lineHeight="19px">Assunto</Label>
                 <S.InputContainer
                     id="answer"
                     type="text"
@@ -62,7 +66,7 @@ const DiscussionsForm = ({ setIsSuccess, newCards, setNewCards }) => {
                         Mínimo 4 letras
                     </SubTitle>
                 )}
-                <Label for="share">Conteúdo</Label>
+                <Label for="share" lineHeight="19px">Conteúdo</Label>
                 <S.TextArea
                     id="share"
                     rows={mobile ? '' : 10}
@@ -78,6 +82,7 @@ const DiscussionsForm = ({ setIsSuccess, newCards, setNewCards }) => {
                     type="submit"
                     positionAbsolute
                     widthDefault={mobile ? '120px' : ''}
+                    lineHeight="16px"
                 >
                     Enviar
                 </Button>

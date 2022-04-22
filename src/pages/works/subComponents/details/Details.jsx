@@ -40,27 +40,54 @@ const Details = () => {
                     <S.Scrool>
                         <div>
                             <div>
-                                <Span>Tipo de Apresentação: </Span>
-                                <Span fBold fSizeMobile="10px">Pôster</Span>
+                                <Span fSize="12px" fSizeMobile="10px">Tipo de Apresentação: </Span>
+                                <Span
+                                    fWeight="bold"
+                                    fSize="12px"
+                                    fSizeMobile="10px"
+                                >
+                                    Pôster
+                                </Span>
                             </div>
                             <div>
-                                <Span>Eixo temático: </Span>
-                                <Span fBold fSizeMobile="10px">Alimentação e saúde (AS)</Span>
+                                <Span fSize="12px" fSizeMobile="10px">Eixo temático: </Span>
+                                <Span
+                                    fWeight="bold"
+                                    fSize="12px"
+                                    fSizeMobile="10px"
+                                >
+                                    Alimentação e saúde (AS)
+                                </Span>
                             </div>
                             <div>
-                                <Span>Palavras-chaves: </Span>
-                                <Span fBold fSizeMobile="10px">Alimentos funcionais, alimentação escolar.</Span>
+                                <Span fSize="12px" fSizeMobile="10px">Palavras-chaves: </Span>
+                                <Span
+                                    fWeight="bold"
+                                    fSize="12px"
+                                    fSizeMobile="10px"
+                                >
+                                    Alimentos funcionais, alimentação escolar.
+                                </Span>
                             </div>
                         </div>
                         <div>
-                            <Text fBold>Autores:</Text>
+                            <Text fWeight="bold" margin="0 0 6px">
+                                Autores:
+                            </Text>
                             {authors?.map((author) => (
-                                <Text fSizeMobile="10px">{author?.name}</Text>
+                                <Text fSizeMobile="10px" margin="0 0 6px">
+                                    {author?.name}
+                                </Text>
                             ))}
                         </div>
                         <div>
                             {university?.map((item) => (
-                                <Text fSizeMobile="10px" textColor="var(--grayDetails3)">{item?.name}</Text>
+                                <Text
+                                    fSizeMobile="10px"
+                                    textColor="var(--grayDetails3)"
+                                >
+                                    {item?.name}
+                                </Text>
                             ))}
                         </div>
                     </S.Scrool>

@@ -12,6 +12,7 @@ export const InputContainer = styled.input`
     margin-bottom: 5px;
     font-size: 14px;
     padding: 5px ;
+    line-height: 18px;
     
     @media (min-width:600px) {
         padding: 10px 11px 10px 23px;
