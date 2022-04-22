@@ -56,15 +56,19 @@ export const Text = styled.p`
     font-size: ${props => (props.fSizeMobile ? props.fSizeMobile : '12px')};
     font-weight: ${props => (props.fWeight ? props.fWeight : '400')};
     color: ${props => (props.textColor ? props.textColor : 'var(--gray-details)')};
+    color: ${props => (props.textColorMobile ? props.textColorMobile : 'var(--gray-details)')};
     margin: ${props => (props.margin ? props.margin : 'unset')};
     font-family: ${props => (props.roboto && 'Roboto')};
     font-family: ${props => (props.segoe && '"Segoe UI", Arial, sans-serif')};
     line-height: ${props => (props.lineHeight ? props.lineHeight : '15px')};
     text-align: ${props => (props.center && 'center')};
+    display: ${props => (props.none && 'none')};
 
-    @media (min-width:600px) {
-    font-size: ${props => (props.fSize ? props.fSize : '14px')};
-    
+    @media (min-width: 768px) {
+        color: ${props => (props.textColor ? props.textColor : 'var(--gray-details)')};
+        font-size: ${props => (props.fSize ? props.fSize : '14px')};
+        display: block;
+        display: ${props => (props.noneDesk && 'none')};
     }
 `
 

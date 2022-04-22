@@ -1,32 +1,53 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-    background-color: var(--backgroundHeader);
     grid-area: header;
     display: flex;
-    flex-wrap: wrap;
     gap: 15px;
-    padding: 5px 50px;
-    justify-content: flex-end;
+    padding: 20px;
+    height: 68px;
+    background: var(--backgroundSlaca);
+    align-items: center;
+    
+    @media (min-width:768px) {
+        padding: 5px 50px;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+         height: unset;
+         background: var(--backgroundHeader);
+    }
  
-    @media (min-width:1250px) {
+    @media (min-width:1300px) {
          height: 68px;
          align-content: center;
          justify-content: space-between;
          align-items: center;
-        }
+    }
+`
+
+export const IoMdMenu = styled.div`
+ @media (min-width:768px) {
+        display: none;
+    }
+
 `
 
 export const TextContainer = styled.div`
     width: -webkit-fill-available;
+    text-align: center;
 
-    @media (min-width: 1250px) {
+    @media (min-width: 768px) {
+        width: unset;
+         text-align: unset;
+    }
+
+    @media (min-width: 1300px) {
         width: unset;
     }
 `
 
 export const Language = styled.div`
-    display: flex; 
+    display: none;
     align-items: center;
     justify-content:center;
     width: auto;
@@ -37,6 +58,10 @@ export const Language = styled.div`
     @media (min-width: 600px) {
         width: 97px;
         height: 34px;
+    }
+
+    @media (min-width: 768px) {
+       display: flex; 
     }
 `
 
@@ -49,8 +74,12 @@ export const Select = styled.select`
 `
 
 export const WelcomeContainer = styled.div`
-    display: flex;
+    display: none;
     gap: 5px;
+
+     @media (min-width: 768px) {
+       display: flex; 
+    }
 `
 
 export const Welcome = styled.div`
