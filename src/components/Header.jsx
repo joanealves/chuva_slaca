@@ -1,5 +1,9 @@
 import React from 'react';
 
+import { useAppDispatch } from '../data/store'
+
+import { setMenu } from '../main/state/SlacaSlice'
+
 import profile from '../assets/profile.svg';
 import notification from '../assets/notification.svg';
 import GloboIcon from '../assets/icons/GloboIcon';
@@ -10,9 +14,11 @@ import { Text } from '../styles/global.styles'
 import { IoMdMenu } from "react-icons/io";
 
 const Header = () => {
+  const dispatch = useAppDispatch()
+
   return (
     <S.HeaderContainer>
-      <S.IoMdMenu>
+      <S.IoMdMenu onClick={() => dispatch(setMenu(true))}>
         <IoMdMenu color="#ffff" />
       </S.IoMdMenu>
       <S.TextContainer>

@@ -11,7 +11,7 @@ export const HeaderContainer = styled.header`
     
     @media (min-width:768px) {
         padding: 5px 50px;
-        justify-content: flex-end;
+         justify-content: space-between;
         flex-wrap: wrap;
          height: unset;
          background: var(--backgroundHeader);
@@ -25,11 +25,13 @@ export const HeaderContainer = styled.header`
     }
 `
 
-export const IoMdMenu = styled.div`
- @media (min-width:768px) {
-        display: none;
-    }
+export const IoMdMenu = styled.button`
+    border: unset;
+    background: unset;
 
+    @media (min-width:768px) {
+            display: none;
+    }
 `
 
 export const TextContainer = styled.div`

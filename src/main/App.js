@@ -1,4 +1,8 @@
 import React from 'react';
+
+import store from '../data/store'
+import { Provider } from 'react-redux'
+
 import Nav from '../components/Nav';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
@@ -16,14 +20,16 @@ import * as S from './App.styles'
 
 export function App() {
   return (
-    <S.AppContainer>
-      <Router>
-        <Nav />
-        <Routes />
-        <Footer />
-      </Router>
-      <GlobalStyle />
-    </S.AppContainer >
+    <Provider store={store}>
+      <S.AppContainer>
+        <Router>
+          <Nav />
+          <Routes />
+          <Footer />
+        </Router>
+        <GlobalStyle />
+      </S.AppContainer >
+    </Provider>
   );
 }
 

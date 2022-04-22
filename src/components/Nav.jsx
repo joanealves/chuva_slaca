@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+import { useSelector } from 'react-redux'
+import { selectSlacaSliceData } from '../main/state/SlacaSlice'
+
 import logo from '../assets/logo.svg';
 
 import * as S from './Nav.styles';
 
 const Nav = () => {
+    const { menu } = useSelector(selectSlacaSliceData)
 
     const isPath = (path) => {
         return path === '/'
@@ -12,9 +17,8 @@ const Nav = () => {
             : window.location.pathname.includes(path)
     }
 
-
     return (
-        <S.AsideContainer>
+        <S.AsideContainer menu={menu}>
             <S.SlacaLink to="/">
                 <S.Slacatext>
                     <p>SLACA 2019</p>

@@ -1,11 +1,31 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+const isMenu = `
+    width: 60%;
+    position: absolute;
+    min-height: 100vh;
+    display:block;
+    background: var(--shape);
+`
+
 export const AsideContainer = styled.aside`
-    background: var(--gray) ;
     grid-area: aside;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     z-index: 10;
+    display: none;
+
+    @media (max-width: 768px) {
+        ${props => props.menu && isMenu}
+    }
+
+    @media (min-width:768px) {
+        display:block;
+    }
+
+    transition: 0.2s ease all;
+
+    
 `
 
 export const Slacatext = styled.div`
