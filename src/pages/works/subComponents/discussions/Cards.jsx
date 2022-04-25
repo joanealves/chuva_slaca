@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import like from '../../../../assets/heart.svg'
 import info from '../../../../assets/info.svg'
 import Checkicon from '../../../../assets/icons/CheckIcon'
+import CheckOrange from '../../../../assets/icons/CheckOrange'
 
 import { cards } from '../../../../constants/constants'
 
@@ -136,15 +137,11 @@ const Cards = ({
           </S.CardContainer>
           {(item?.authorAnswer?.length > 0 && isViewAuthorAnswer) && (
             <S.AuthorAnswerContainer>
-
-
-              <div>  {/* essa div   tem que ser display flex*/}
-                <p> {item?.author}</p>
-                <p>Autor</p>
-                {/* Icone  */}
-              </div>
-
-
+              <S.AuthorContainer>
+                <S.AuthorAnswer> {item?.author}</S.AuthorAnswer>
+                <S.Author>Autor</S.Author>
+                <CheckOrange />
+              </S.AuthorContainer>
               <Text
                 fSizeMobile='10px'
                 fSize='12px'
@@ -153,19 +150,11 @@ const Cards = ({
               >
                 {item?.authorAnswer}
               </Text>
-
-
-
             </S.AuthorAnswerContainer>
           )}
-
-
-
         </>
-
       ))}
     </S.CardsWrapper>
-
   );
 }
 

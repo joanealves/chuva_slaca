@@ -51,6 +51,35 @@ export const AuthorAnswerContainer = styled.div`
     box-shadow-top: unset;
 `
 
+export const AuthorContainer = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 33px;
+    width: -webkit-fill-available;
+    position: relative;
+`
+
+export const AuthorAnswer = styled.p`
+    left: 0;
+    position: absolute;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--gray-details);
+`
+
+export const Author = styled.p`
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--text-orange);
+`
+
 export const Input = styled.input`
     border: 1px solid #CCCCCC;
     border-radius: 3px;
@@ -59,7 +88,6 @@ export const Input = styled.input`
     margin-bottom: 5px;
     font-size: 14px;
     padding: 5px ;
-   
 `
 
 export const EditTopicContent = styled.div`
@@ -81,7 +109,7 @@ export const CheckIconContainer = styled.div`
 `
 
 export const ButtonLike = styled.button`
-    background: #ED7839;
+    background: var(--text-orange);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
     border-radius: 2px;
     border: unset;
