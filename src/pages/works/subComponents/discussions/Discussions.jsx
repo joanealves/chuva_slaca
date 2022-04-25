@@ -17,6 +17,7 @@ const Discussions = () => {
     const [isSuccess, setIsSuccess] = useState(false)
     const [isShare, setIsShare] = useState(false)
     const [newCards, setNewCards] = useState([])
+    const [sendAuthorAnswer, setSendAuthorAnswer] = useState(false);
 
     return (
         <S.DiscussionsContainer>
@@ -50,6 +51,7 @@ const Discussions = () => {
                         setIsSuccess={setIsSuccess}
                         newCards={newCards}
                         setNewCards={setNewCards}
+                        setSendAuthorAnswer={setSendAuthorAnswer}
                     />
                 )}
                 {isSuccess && (
@@ -60,8 +62,11 @@ const Discussions = () => {
                     />
                 )}
                 <Cards
-                    setNewCards={setNewCards}
+                    isSuccess={isSuccess}
                     newCards={newCards}
+                    setNewCards={setNewCards}
+                    sendAuthorAnswer={sendAuthorAnswer}
+                    setSendAuthorAnswer={setSendAuthorAnswer}
                 />
             </WrapperContent>
         </S.DiscussionsContainer>

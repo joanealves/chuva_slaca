@@ -61,6 +61,8 @@ export const Text = styled.p`
     line-height: ${props => (props.lineHeight ? props.lineHeight : '15px')};
     text-align: ${props => (props.center && 'center')};
     display: ${props => (props.none && 'none')};
+    cursor: ${props => (props.cPointer && 'pointer')};
+    overflow-wrap: ${props => (props.overflowWrap && 'anywhere')};
 
     @media (min-width: 768px) {
         color: ${props => (props.textColor ? props.textColor : 'var(--gray-details)')};
@@ -156,6 +158,9 @@ export const Button = styled.button`
     font-weight: 700;
     font-size: 15px;
     ${props => (props.positionAbsolute && absolute)};    
+
+    cursor: pointer;
+    z-index: 200;
     `
 
 export const ShareContainer = styled.div`

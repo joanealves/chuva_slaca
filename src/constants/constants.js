@@ -31,7 +31,7 @@ export const cards = [
         name: 'Carlos Henrique Santos',
         info: 'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto  de processo formativo situado impacto de processo formativo processo...',
         like: 1,
-        answer: 1,
+        answer: 0,
     },
     {
         id: 2,
@@ -39,6 +39,6 @@ export const cards = [
         name: 'Carlos Henrique Santos',
         info: 'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto  de processo formativo situado impacto de processo formativo processo...',
         like: 1,
-        answer: 1,
+        answer: 0,
     },
 ]
